@@ -4,7 +4,12 @@ public class HomeWorkApp {
     public static void main(String[] args) {
         Employee[] employeesArray = new Employee[5];
         employeesArray[0] = new Employee(
-                "Ivanov Ivan", "Engineer", "ivivan@mailbox.com", "892312312", 30000, 30);
+                "Ivanov Ivan",
+                "Engineer",
+                "ivivan@mailbox.com",
+                "892312312",
+                30000,
+                -13);
         employeesArray[1] = new Employee(
                 "Bill Gates",
                 "CEO",

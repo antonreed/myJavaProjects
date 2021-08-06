@@ -13,8 +13,11 @@ public class Employee {
         this.position = position;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.salary = salary;
-        this.age = age;
+        if (salary >= 0) this.salary = salary;
+        else System.out.println("Ошибка! Человек не может работать в долг.");
+
+        if (age >= 0) this.age = age;
+        else System.out.println("Ошибка! Возраст не может быть отрицательным числом.");
     }
 
     public String toString() {
@@ -63,7 +66,8 @@ public class Employee {
     }
 
     public void setSalary(int salary) {
-        this.salary = salary;
+        if (salary >= 0) this.salary = salary;
+        else System.out.println("Ошибка! Человек не может работать в долг.");
     }
 
     public int getAge() {
@@ -71,8 +75,7 @@ public class Employee {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age >= 0) this.age = age;
+        else System.out.println("Ошибка! Возраст не может быть отрицательным числом.");
     }
 }
-
-
