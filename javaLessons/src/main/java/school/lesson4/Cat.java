@@ -20,20 +20,8 @@ public class Cat extends Animal {
         return count;
     }
 
-    public int getAppetite() {
-        return appetite;
-    }
-
-    public int setAppetite(int appetite) {
-        return appetite;
-    }
-
     public boolean isSatiety() {
         return satiety;
-    }
-
-    public void setSatiety(boolean satiety) {
-        this.satiety = satiety;
     }
 
     @Override

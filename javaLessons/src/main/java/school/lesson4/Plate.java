@@ -12,14 +12,9 @@ public class Plate {
         return food;
     }
 
-    public void setFood(int food) {
-        this.food = food;
-    }
-
     public boolean isManagedToEat() {
         return managedToEat;
     }
-
 
     /*  Знаю, что не нужно было, но сделал так,
         чтобы последний везунчик доел остатки,

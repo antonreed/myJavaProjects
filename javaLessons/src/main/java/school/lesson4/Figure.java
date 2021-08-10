@@ -11,20 +11,8 @@ public class Figure implements GeometricFigure {
         this.borderColor = borderColor;
     }
 
-    public double getPerimeter() {
-        return perimeter;
-    }
-
     public void setPerimeter(double perimeter) {
         this.perimeter = perimeter;
-    }
-
-    public double getSquare() {
-        return square;
-    }
-
-    public void setSquare(double square) {
-        this.square = square;
     }
 
     @Override

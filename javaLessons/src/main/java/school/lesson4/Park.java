@@ -15,42 +15,18 @@ public class Park {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     private class Attraction {
         private String name;
         private String workingHours;
         private int price;
         private static int index = 0;
 
-        public String getName() {
-            return name;
-        }
-
         public void setName(String name) {
             this.name = name;
         }
 
-        public String getWorkingHours() {
-            return workingHours;
-        }
-
         public void setWorkingHours(String workingHours) {
             this.workingHours = workingHours;
-        }
-
-        public int getPrice() {
-            return price;
         }
 
         public void setPrice(int price) {

@@ -1,7 +1,7 @@
 package school.lesson4;
 
 public class Payment {
-    private int id = 0;
+    private static int id = 0;
     private final String creditCard;
     private final String creditCardNumber;
     private Product product;
@@ -9,7 +9,7 @@ public class Payment {
     private final Product[] products = new Product[10];
 
     public Payment(String creditCard, String creditCardNumber) {
-        this.id++;
+        id++;
         this.creditCard = creditCard;
         this.creditCardNumber = creditCardNumber;
     }
@@ -37,18 +37,6 @@ public class Payment {
             index++;
             totalPrice += price * amount;
         }
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getCreditCard() {
-        return creditCard;
-    }
-
-    public String getCreditCardNumber() {
-        return creditCardNumber;
     }
 
     public void generatePayment(String name, int amount, double price) {
