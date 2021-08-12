@@ -5,21 +5,19 @@ public class HomeWorkApp {
 
     public static void main(String[] args) {
         String[][] stringArray = new String[4][4];
-
-        /*
-        Мне было лень заполнять нормально, поэтому как-то так)
-        И да, я знаю, что при неверном размере массива и
-        таком способе заполнении тоже может быть ошибка,
-        мне просто лень сейчас ловить и это)
-        */
-        stringArray[0][0] = "1";
-        stringArray[0][1] = "3";
-        stringArray[0][2] = "8";
-        stringArray[0][3] = "4";
-        stringArray[1][0] = "10";
-        stringArray[1][1] = "Хороших";
-        stringArray[1][2] = "выходных";
-        stringArray[1][3] = "2";
+        try {
+            stringArray[0][0] = "1";
+            stringArray[0][1] = "3";
+            stringArray[0][2] = "8";
+            stringArray[0][3] = "4";
+            stringArray[1][0] = "10";
+            stringArray[1][1] = "Хороших";
+            stringArray[1][2] = "выходных";
+            stringArray[1][3] = "2";
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Заполните массив согласно его размеру.");
+            return;
+        }
 
         try {
             array4x4(stringArray);
@@ -30,7 +28,7 @@ public class HomeWorkApp {
         }
     }
 
-    public static void array4x4(String[][] stringArray) {
+    public static void array4x4(String[][] stringArray) throws MyArrayDataException {
         if (stringArray.length != 4 || stringArray[0].length != 4) {
             throw new MyArraySizeException();
         }
