@@ -19,7 +19,7 @@ public class HomeWorkApp {
 
     public static void load(AppData appData) {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("data.csv"));
+            BufferedReader reader = new BufferedReader(new FileReader(file));
             String[] header = reader.readLine().split(SPLIT_BY);
             String line;
             String[] stringArrayFromLine;
@@ -60,7 +60,7 @@ public class HomeWorkApp {
 
     public static void save(AppData appData) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("saved.csv"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
             String[] header = appData.getHeader();
             int[][] data = appData.getData();
 
