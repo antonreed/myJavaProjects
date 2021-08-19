@@ -1,17 +1,11 @@
 package school.lesson7;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class AppData {
     private String[] header;
     private int[][] data;
-
-    public AppData() {
-
-    }
-
-    public AppData(String[] header, int[][] data) {
-        this.header = header;
-        this.data = data;
-    }
 
     public String[] getHeader() {
         return header;
@@ -25,19 +19,33 @@ public class AppData {
         return data;
     }
 
-    public void setData(int[][] data) {
-        this.data = data;
+    public void setData(ArrayList<int[]> arrayList) {
+        data = new int[arrayList.size()][];
+        arrayList.toArray(data);
     }
 
-    public void setArray(int index, int[] array) {
+    public void addToData(int[] array) {
         try {
-            data[index] = array;
-        } catch (Exception e) {
-            e.printStackTrace();
+            ArrayList<int[]> arrayList = new ArrayList<>(Arrays.asList(data));
+            arrayList.add(array);
+            setData(arrayList);
+        } catch (NullPointerException e) {
+            System.out.println("Не удалось добавить данные.");
         }
     }
 
-    public void info() {
+    public void removeFromData(int index) {
+        try {
+            ArrayList<int[]> arrayList = new ArrayList<>(Arrays.asList(data));
+            arrayList.remove(index);
+            setData(arrayList);
+        } catch (NullPointerException e) {
+            System.out.println("В ArrayList ничего нет.");
+        }
+    }
+
+    public void info() throws NullPointerException {
+
         for (String item : header) {
             System.out.printf("%-10s", item);
         }
@@ -46,10 +54,9 @@ public class AppData {
 
         for (int[] array : data) {
             for (int item : array) {
-                System.out.printf("%-10s", item);
+                System.out.printf("%-10d", item);
             }
             System.out.println();
         }
-        System.out.println();
     }
 }
