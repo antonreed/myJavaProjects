@@ -24,10 +24,9 @@ public class HomeWorkApp {
                 "Эквадор",
         };
 
-        List<String> allWords = new ArrayList<>(Arrays.asList(words));
         Map<String, Integer> countedWords = new HashMap<>();
 
-        for (String word : allWords) {
+        for (String word : words) {
             if (countedWords.containsKey(word)) {
                 countedWords.put(word, countedWords.get(word) + 1);
             } else {
@@ -60,6 +59,5 @@ public class HomeWorkApp {
         phonebook.get("Иванов");
         phonebook.get("Сидоров");
         phonebook.get("Козлов");
-
     }
 }
